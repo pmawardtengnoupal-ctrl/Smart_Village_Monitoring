@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@auth/*": ["src/auth/*"],
+      "@rbac/*": ["src/rbac/*"],
+      "@dashboard/*": ["src/dashboard/*"],
+      "@features/*": ["src/features/*"],
+      "@common/*": ["src/common/*"],
+      "@data/*": ["src/data/*"],
+      "@config/*": ["src/config/*"],
+      "@router/*": ["src/router/*"],
+      "@styles/*": ["src/styles/*"]   // ✅ added
+    },
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "plugins": [{ "name": "next" }],
+    "allowJs": true
+  },
+  "include": ["next-env.d.ts", "src/**/*", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

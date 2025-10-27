@@ -1,0 +1,44 @@
+/* src/styles/global.css */
+
+/* Tailwind (if you use it) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS variables / theme */
+:root {
+  --bg: #f8fafc; /* slate-50 */
+  --card: #ffffff;
+  --ring: #10b981; /* emerald-500 */
+}
+
+/* Base document */
+html, body {
+  height: 100%;
+  background: var(--bg);
+}
+
+/* Smooth fonts */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Small helper animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: none; }
+}
+.animate-fadeIn { animation: fadeIn .22s ease both; }
+
+/* Focus ring utility for inputs/buttons */
+.focus-ring {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ring, #10b981);
+}
+
+/* Card “glass” style you’ve been using */
+.glass {
+  background: var(--card);
+  backdrop-filter: saturate(140%) blur(6px);
+}
